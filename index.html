@@ -20,6 +20,15 @@
   </style>
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-800">
+   <script>
+    const storedEmail = localStorage.getItem('notesAppEmail');
+    const storedPassword = localStorage.getItem('notesAppPassword');
+
+    if (!storedEmail || !storedPassword) {
+      alert('Please sign up first.');
+      window.location.href = "signup.html";
+    }
+  </script>
   <div id="app" class="h-full">
     <!-- Header -->
     <header class="sticky top-0 z-10 bg-white/80 backdrop-blur border-b">
