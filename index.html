@@ -76,6 +76,14 @@
   </div>
 
   <script>
+   //--login---
+    const storedEmail = localStorage.getItem('notesAppEmail');
+const storedPassword = localStorage.getItem('notesAppPassword');
+
+if (!storedEmail || !storedPassword) {
+  alert('Please sign up first.');
+  window.location.href = "signup.html";
+}
     // ---- Utilities ----
     const $ = sel => document.querySelector(sel);
     const $$ = sel => document.querySelectorAll(sel);
